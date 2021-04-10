@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="css/custom.css">
     
 <title>XiTiZ Upreti</title>
-    <meta name="keywords" content="Download anime kdrama movies series latest watch online">
+    <meta name="keywords" content="kshitizupreti kshitiz xitiz">
     <meta name="description" content="">
     <meta name="author" content="XiTiZ Upreti">
 </head>
@@ -36,7 +36,7 @@
           transform: scale(1.3);
         }
           </style>
-            <a href=""><img class="img-fluid, zoom" style="height:85px ; width:90px ;" src="images/logo.jpg" alt="LOGO" /></a>
+            <a href="https://www.kshitizupreti.com.np"><img class="img-fluid, zoom" style="height:85px ; width:90px ;" src="images/logo.jpg" alt="LOGO" /></a>
       
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
@@ -45,19 +45,19 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" onmouseover="this.style.color='yellow'"  href="www.kshtiizupreti.com.np">--Home--</a>
+              <a class="nav-link js-scroll-trigger" onmouseover="this.style.color='yellow'"  href="https://www.kshitizupreti.com.np">--Home--</a>
             </li>
              <li class="nav-item">
               <a class="nav-link js-scroll-trigger"  onmouseover="this.style.color='yellow'" href="uploads/hacks.php">--Hacks--</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger"  onmouseover="this.style.color='yellow'" href="uploads/downloads.php">--Downloads--</a>
+              <a class="nav-link js-scroll-trigger"  onmouseover="this.style.color='yellow'" href="uploads/contact.php">--Contacts--</a>
             </li>
           </ul>
         </div>
       </div>
       </nav>
-
+<!--
         <script type="text/javascript">
       function setCookie(cname,cvalue,exdays){
   var d = new Date();
@@ -100,7 +100,7 @@ document.body.innerHTML="<center><h4>Access Denied!</h4>Enter your name and try 
 alert("Please enter you name correctly");}
      }
   }
-} 
+}  -->
     </script>
 	<section id="home" class="main-banner parallaxie" style="background: url('images/banner-01.jpg')">
 		<div class="heading">
@@ -240,13 +240,11 @@ alert("Please enter you name correctly");}
             <div class="footer-distributed">
                 <div class="footer-left">
                     <p class="footer-links">
-                        <a href="www.kshitizupreti.com.np/#home">Home</a>
-                        <a href="www.kshitizupreti.com.np/#about">About</a>
-                        <a href="www.kshitizupreti.com.np/uploads/contact.php">Contacts</a>
-                        <hr>
-                        Share this Website :- <div class="fb-share-button" data-href="https://kshitizupreti.com.np/" data-layout="button_count" data-size="large"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fkshitizupreti.com.np%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="uploads/contact.php">Contacts</a>
+                        <h2><a style="color: rgb(240, 225, 12);" href="uploads/akatsuki.php">👉Learn about our Official Akatsuki Clan Here!!👈</a></h2>
                     </p>
-                    <hr>
                     <p class="footer-company-name">All Rights Reserved. &copy; 2021 <a href="https://www.instagram.com/kshitizupreti"target="_blank">XiTiZ Upreti</a> Design By : <a href="https://www.instagram.com/kshitizupreti"target="_blank">XiTiZ</a></p>
                 </div>
             </div>
@@ -255,15 +253,15 @@ alert("Please enter you name correctly");}
 
     <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
     <!-- ALL JS FILES -->
-    <script src="www.kshitizupreti.com.np/js/all.js"></script>
+    <script src="js/all.js"></script>
     <!-- Camera Slider -->
-    <script src="www.kshitizupreti.com.np/js/jquery.mobile.customized.min.js"></script>
-    <script src="www.kshitizupreti.com.np/js/jquery.easing.1.3.js"></script> 
-    <script src="www.kshitizupreti.com.np/js/parallaxie.js"></script>
-    <script src="www.kshitizupreti.com.np/js/headline.js"></script>
+    <script src="js/jquery.mobile.customized.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script> 
+    <script src="js/parallaxie.js"></script>
+    <script src="js/headline.js"></script>
     <!-- ALL PLUGINS -->
-    <script src="www.kshitizupreti.com.np/js/custom.js"></script>
-    <script src="www.kshitizupreti.com.np/js/jquery.vide.js"></script>
-    <script src="www.kshitizupreti.com.np/js/modernizr.js"></script> <!-- Modernizr -->
+    <script src="js/custom.js"></script>
+    <script src="js/jquery.vide.js"></script>
+    <script src="js/modernizr.js"></script> <!-- Modernizr -->
 </body>
 </html>
