@@ -48,7 +48,7 @@
               <a class="nav-link js-scroll-trigger" onmouseover="this.style.color='yellow'"  href="https://www.kshitizupreti.com.np">--Home--</a>
             </li>
              <li class="nav-item">
-              <a class="nav-link js-scroll-trigger"  onmouseover="this.style.color='yellow'" href="../uploads/hacks.php">--Hacks--</a>
+              <a class="nav-link js-scroll active"  onmouseover="this.style.color='yellow'" href="../uploads/hacks.php">--Hacks--</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger"  onmouseover="this.style.color='yellow'" href="../uploads/contact.php">--Contacts--</a>

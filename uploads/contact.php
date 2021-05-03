@@ -51,7 +51,7 @@
               <a class="nav-link js-scroll-trigger"  onmouseover="this.style.color='yellow'" href="../uploads/hacks.php">--Hacks--</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger"  onmouseover="this.style.color='yellow'" href="../uploads/contact.php">--Contacts--</a>
+              <a class="nav-link js-scroll active"  onmouseover="this.style.color='yellow'" href="../uploads/contact.php">--Contacts--</a>
             </li>
           </ul>
         </div>

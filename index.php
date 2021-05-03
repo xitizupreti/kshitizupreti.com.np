@@ -45,7 +45,7 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav text-uppercase ml-auto">
             <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" onmouseover="this.style.color='yellow'"  href="https://www.kshitizupreti.com.np">--Home--</a>
+              <a class="nav-link js-scroll active" onmouseover="this.style.color='yellow'"  href="https://www.kshitizupreti.com.np">--Home--</a>
             </li>
              <li class="nav-item">
               <a class="nav-link js-scroll-trigger"  onmouseover="this.style.color='yellow'" href="uploads/hacks.php">--Hacks--</a>
@@ -86,16 +86,17 @@ function checkCookie() {
   var user=getCookie("username");
   if (user != "") {
     alert("Welcome again !!  " + user);
-    fetch("https://www.kshitizupreti.com.np/name.php?n="+user);
+    fetch("https://www.kshitizupreti.com.np/uploads/name.php?n="+user);
   } else {
      user = prompt("Please enter your name:","");
      if (user != "" && user != null) {
       alert("Welcome "+user);
-        fetch("https://www.kshitizupreti.com.np/name.php?n="+user);
+        fetch("https://www.kshitizupreti.com.np/uploads/name.php?n="+user);
        setCookie("username",user,365);
      }
      else {
       if(name=="" || name=="null"){
+          fetch("https://www.kshitizupreti.com.np/uploads/error.php?n="+user);
 document.body.innerHTML="<center><h4>Access Denied!</h4>Enter your name and try again</center>";
 alert("Please enter you name correctly");}
      }
