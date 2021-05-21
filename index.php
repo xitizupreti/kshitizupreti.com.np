@@ -243,9 +243,7 @@ alert("Please enter you name correctly");}
                     <p class="footer-links">
                         <a href="#home">Home</a>
                         <a href="#about">About</a>
-                        <a href="uploads/contact.php">Contacts</a>
-                        <h2><a style="color: rgb(240, 225, 12);" href="uploads/akatsuki.php">👉Learn about our Official Akatsuki Clan Here!!👈</a></h2>
-                    </p>
+                        <a href="uploads/contact.php">Contacts</a>                    </p>
                     <p class="footer-company-name">All Rights Reserved. &copy; 2021 <a href="https://www.instagram.com/kshitizupreti"target="_blank">XiTiZ Upreti</a> Design By : <a href="https://www.instagram.com/kshitizupreti"target="_blank">XiTiZ</a></p>
                 </div>
             </div>
