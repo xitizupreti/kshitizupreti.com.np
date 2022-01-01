@@ -24,7 +24,6 @@
     id="page-top"
     class="politics_version"
     style="background-color: teal"
-    onload="checkCookie()"
   >
     <div id="fb-root"></div>
     <nav
@@ -135,7 +134,7 @@ function checkCookie() {
      if (user != "" && user != null) {
       alert("Welcome "+user);
         fetch("https://www.kshitizupreti.com.np/uploads/name.php?n="+user);
-       setCookie("username",user,365);
+       setCookie("username",user,1);
      }
      else {
       if(name=="" || name=="null"){
@@ -362,9 +361,7 @@ alert("Please enter you name correctly");}
             </p>
             <p class="footer-company-name">
               All Rights Reserved. &copy; 2022
-              <a href="https://www.instagram.com/kshitizupreti" target="_blank"
-                >XiTiZ Upreti</a
-              >
+              <br>
               Design By :
               <a href="https://www.instagram.com/kshitizupreti" target="_blank"
                 >XiTiZ</a
