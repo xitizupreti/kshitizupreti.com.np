@@ -641,7 +641,9 @@ xclip
 }
 
 .services-inner-box {
-  padding: 15px;
+  display: grid;
+  justify-content: center;
+  padding: 10px;
   background: #ffffff;
   margin-bottom: 30px;
 }
