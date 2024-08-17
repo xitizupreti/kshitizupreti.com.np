@@ -14,3 +14,4 @@ day month to right
 mobile blog center
 error page
 blur in blog
+route

@@ -39,8 +39,8 @@ export default function About() {
           <em>MERN stack and various other web development technologies.</em>
           <br />
           <br />
-          If you have any questions or if there's anything you'd like to
-          discuss, please feel free to reach out. Thank you for visiting my
+          If you have any questions or if there&apos;s anything you&apos;d like
+          to discuss, please feel free to reach out. Thank you for visiting my
           website, and I look forward to connecting with you!
         </p>
         <div className="flex justify-center">
