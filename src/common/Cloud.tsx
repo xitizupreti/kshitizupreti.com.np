@@ -8,8 +8,7 @@ export default function Cloud() {
       height="150"
       viewBox="0 0 85 100"
       preserveAspectRatio="none"
-      className="relative"
-      style={{ top: "-130px", fill: "white", zIndex: "2" }}
+      className="relative fill-white top-[-130px] z-2"
     >
       <path
         d="M-5 100 Q 0 20 5 100 Z

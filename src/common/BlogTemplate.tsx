@@ -8,23 +8,22 @@ interface CardProps {
 
 const Card = ({ date, image, heading, subHeading, description }: CardProps) => {
   return (
-    <div style={{ width: "350px" }} className="relative h-[auto] bg-white p-3">
-      <h1 className=" absolute top-2 right-2 text-white bg-black bg-opacity-50 p-2 rounded">
+    <div className="relative h-auto w-[350px] bg-white p-3">
+      <h1 className=" absolute top-3 right-3 text-white bg-black bg-opacity-50 p-2 rounded z-[2]">
         {date}
       </h1>
-      {/* <div className="absolute inset-0 bg-black bg-opacity-50 z-1"></div> */}
-      <img
-        src={image}
-        style={{ width: "350px", minHeight: "350px" }}
-        alt="wait for this photo"
-      />
+      <div className="relative">
+        <div className="absolute inset-0 bg-black/0 hover:bg-black/50 transition-all animate-pulse "></div>
+        <img
+          src={image}
+          className="w-[350px] min-h-[350px] "
+          alt="wait for this photo"
+        />
+      </div>
 
       {/* Content */}
       <div className="p-4">
-        <h4
-          style={{ marginBottom: "10px" }}
-          className="text-xl text-[#ffa460] font-bold"
-        >
+        <h4 className="text-xl text-[#ffa460] font-bold mb-[10px]">
           {heading}
         </h4>
         <p className="text-sm text-center font-bold">{subHeading}</p>

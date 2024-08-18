@@ -13,10 +13,10 @@ import {
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navigation = [
-  { name: "Home", href: "#", current: true },
-  { name: "About", href: "#about", current: false },
-  { name: "Blog", href: "#blog", current: false },
-  { name: "Contacts", href: "#contacts", current: false },
+  { name: "Home", href: "/", current: true },
+  { name: "About", href: "/#about", current: false },
+  { name: "Blog", href: "/#blog", current: false },
+  { name: "Contacts", href: "/contact", current: false },
 ];
 
 function classNames(...classes: string[]) {
@@ -27,7 +27,10 @@ export default function Example() {
   const [activeLink, setActiveLink] = useState("#");
 
   return (
-    <Disclosure as="nav" className="bg-gray-800 fixed top-0 left-0 w-full z-50">
+    <Disclosure
+      as="nav"
+      className="bg-gray-800 fixed top-0 left-0 w-full z-[20]"
+    >
       <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
         <div className="relative flex h-16 items-center justify-between">
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

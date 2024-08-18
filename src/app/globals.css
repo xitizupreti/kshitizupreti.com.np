@@ -14,7 +14,7 @@
   white-space: nowrap;
   border-right: 2px solid #ffa460;
   animation: typing 6s steps(40, end) infinite, blink 0.75s step-end infinite;
-  vertical-align: bottom;
+  /* vertical-align: bottom; */
   line-height: 1;
 }
 
@@ -84,12 +84,10 @@
 
 .text:hover .horizontal.first {
   width: 0px;
-  transform: translateX(-100vh);
 }
 
 .text:hover .horizontal.second {
   width: 0px;
-  transform: translateX(100vh);
 }
 
 .text:hover .vertical.first {

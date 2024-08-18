@@ -1,10 +1,7 @@
 export default function Footer() {
   return (
     <div className=" bg-[#1f1f1f] h-[120px] p-5">
-      <div
-        style={{ width: "450px" }}
-        className=" p-3 ml-40 flex justify-around "
-      >
+      <div className=" p-3 w-[300px] ml-40 flex justify-around ">
         <a className="text-[#726a61] hover:text-white" href="#">
           Home
         </a>
