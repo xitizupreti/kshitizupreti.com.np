@@ -15,7 +15,7 @@ export default function Footer() {
           Contacts
         </a>
       </div>
-      <p className="cursor-pointer float-right text-[#726a61] mr-24 hover:text-white">
+      <p className="cursor-pointer float-right text-[#726a61] mr-[65px] hover:text-white">
         All Rights Reserved. © 2023 (by XiTiZ)
       </p>
     </div>

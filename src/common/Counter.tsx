@@ -1,5 +1,6 @@
 "use client"; // Only use this in components that need to run client-side code
 
+import Image from "next/image";
 import { useEffect } from "react";
 
 export default function Counter() {
@@ -8,24 +9,16 @@ export default function Counter() {
     script.src =
       "https://www.freevisitorcounters.com/en/home/counter/733734/t/0";
     script.async = true;
-    script.onload = () => {
-      if ((window as any).kofiWidgetOverlay) {
-        (window as any).kofiWidgetOverlay.draw("kshitizupreti", {
-          type: "floating-chat",
-          "floating-chat.donateButton.text": "Support Us",
-          "floating-chat.donateButton.background-color": "#ffa460",
-          "floating-chat.donateButton.text-color": "#fff",
-        });
-      }
-    };
-
     document.body.appendChild(script);
   }, []);
 
   return (
-    <img
+    <Image
+      alt="Counter"
+      width={102}
+      height={88}
       src="https://www.freevisitorcounters.com/en/counter/render/733734/t/0"
-      className="absolute  z-[30]"
+      className="absolute  right-0 xl:top-0 top-[65px] md:block z-[30]"
     />
   );
 }

@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface CardProps {
   date: string;
   image: string;
@@ -14,7 +16,9 @@ const Card = ({ date, image, heading, subHeading, description }: CardProps) => {
       </h1>
       <div className="relative">
         <div className="absolute inset-0 bg-black/0 hover:bg-black/50 transition-all animate-pulse "></div>
-        <img
+        <Image
+          width={350}
+          height={350}
           src={image}
           className="w-[350px] min-h-[350px] "
           alt="wait for this photo"
