@@ -83,7 +83,7 @@ export default function Contacts() {
       </h1>
       <h2 className="text-2xl font-bold ml-[10%] mb-4">Contact Me:</h2>
       <h1 className="text-2xl font-bold w-fit ml-[10%] mb-8">
-        <span className="dynamic-text">Here are some links to contact me:</span>
+        <span className="dynamic-text">Some links to contact me:</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  justify-items-center">
         {contacts.map((contact, index) => (
