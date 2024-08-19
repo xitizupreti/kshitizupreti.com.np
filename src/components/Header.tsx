@@ -14,10 +14,10 @@ import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 
 const navigation = [
-  { name: "Home", href: "/", current: true },
+  { name: "Home", href: "/#", current: true },
   { name: "About", href: "/#about", current: false },
   { name: "Blog", href: "/#blog", current: false },
-  { name: "Contacts", href: "/contact", current: false },
+  { name: "Contacts", href: "/contact#contact", current: false },
 ];
 
 function classNames(...classes: string[]) {

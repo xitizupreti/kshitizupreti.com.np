@@ -77,10 +77,7 @@ export default function Contacts() {
   ];
 
   return (
-    <div
-      id="contacts"
-      className="relative top-[-100px] p-9 w-full bg-[#f2f3f5]"
-    >
+    <div id="contact" className="relative top-[-100px] p-9 w-full bg-[#f2f3f5]">
       <h1 className="uppercase text-[#ffa460] md:text-4xl text-4xl p-4 md:p-6 text-center font-bold">
         Contacts
       </h1>
