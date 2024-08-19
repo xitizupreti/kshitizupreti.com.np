@@ -53,13 +53,13 @@ export default function About() {
           </a>
         </div>
       </div>
-      <div className=" uppercase flex justify-center p-4 mt-9 md:w-1/2 w-[100%] h-[720px]">
-        <div className=" bg-[#110227] w-[540px] h-[720px] ">
+      <div className=" uppercase flex justify-center p-4 mt-9 md:w-1/2 w-[100%] ">
+        <div className=" bg-[#110227]  ">
           <Image
             alt="About"
             width={540}
             height={720}
-            className="relative bottom-4 right-4 w-full h-[720px]"
+            className="relative bottom-4 right-4 w-full "
             src="/about_04.jpg"
           />
         </div>
