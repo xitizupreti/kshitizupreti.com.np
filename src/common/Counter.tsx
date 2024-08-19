@@ -18,7 +18,7 @@ export default function Counter() {
       width={102}
       height={88}
       src="https://www.freevisitorcounters.com/en/counter/render/733734/t/0"
-      className="absolute  right-0 xl:top-0 top-[65px] md:block z-[30]"
+      className="absolute logo cursor-pointer right-[15px] xl:top-[15px] top-[65px] md:block z-[30]"
     />
   );
 }

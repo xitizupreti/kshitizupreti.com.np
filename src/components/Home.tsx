@@ -5,10 +5,9 @@ export default function Hero() {
     <div className="relative w-full h-[400px]">
       <Image
         alt="cover"
-        layout="fill"
-        objectFit="cover"
+        fill
         src="/banner-01.jpg"
-        className="z-0"
+        className="z-0 object-cover"
       />
 
       <div className="absolute inset-0 bg-black bg-opacity-50 z-1"></div>
