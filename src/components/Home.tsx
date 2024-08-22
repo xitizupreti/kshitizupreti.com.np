@@ -11,7 +11,7 @@ export default function Hero() {
       />
 
       <div className="absolute inset-0 bg-black bg-opacity-50 z-1"></div>
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-white z-10">
+      <div className="absolute mt-20 md:mt-0 inset-0 flex flex-col items-center justify-center text-white z-10">
         <h1 className="text-3xl font-bold ">
           <span className="dynamic-text">Hello I&apos;m Kshitiz Upreti</span>
         </h1>
