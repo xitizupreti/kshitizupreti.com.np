@@ -14,23 +14,23 @@ export default function Blog() {
         <Card
           date="18 Nov"
           image="/blog-01.png"
-          heading="Birthay"
+          heading="Birthday"
           subHeading="by admin NOV 18, 2001"
-          description="I was born on 2001 November 18(Sunday). The day where a beautiful nurse kissed me."
+          description="The day I was born into this world."
         />
         <Card
           date="18 Feb"
           image="/blog-02.jpg"
           heading="Bartabanda"
           subHeading="by admin FEB 18, 2016"
-          description="My Bartabanda was successfully completed with my family members and my relatives."
+          description="A traditional coming-of-age ceremony."
         />
         <Card
           date="DAY MONTH"
           image=""
           heading="Marriage"
           subHeading="by admin *** **, 20**"
-          description="404 Error: Marriage not found. I'm still single. I'm waiting for my soulmate."
+          description="This space is reserved for my future marriage."
         />
       </div>
     </div>
