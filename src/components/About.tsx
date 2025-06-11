@@ -29,16 +29,18 @@ export default function About() {
           <em>
             <b>Frontend Developer</b>
           </em>
-          . I specialize in working with{" "}
+          . I specialize in{" "}
           <em>
-            <b>React.js</b>
-          </em>{" "}
-          and{" "}
-          <em>
-            <b>Next.js</b>
+            <b>React.js</b>, <b>Next.js</b>, <b>Tailwind CSS</b>,{" "}
+            <b>TypeScript</b>, <b>Sass/SCSS</b>, and <b>WordPress</b> using{" "}
+            <b>Elementor</b>
           </em>
-          . My experience also includes working with the{" "}
-          <em>MERN stack and various other web development technologies.</em>
+          .
+          <br />
+          <br />
+          I love turning design ideas into fully responsive, high-performance
+          websites. I'm always eager to learn new technologies and take on
+          exciting projects.
           <br />
           <br />
           If you have any questions or if there&apos;s anything you&apos;d like

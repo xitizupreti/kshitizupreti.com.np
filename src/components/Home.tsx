@@ -20,8 +20,8 @@ export default function Hero() {
         </h1>
         <div className="text">
           <h2 className="text-xl text-center mt-2">
-            Web Dev turning coffee into code ☕️ <br /> JS, React, Next, MERN
-            Stack
+            Frontend Dev turning coffee into code ☕️ <br /> React, Next.js,
+            WordPress, Elementor, Tailwind, Sass/SCSS
           </h2>
           <span className="vertical first"></span>
           <span className="vertical second"></span>
