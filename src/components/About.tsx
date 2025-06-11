@@ -39,7 +39,7 @@ export default function About() {
           <br />
           <br />
           I love turning design ideas into fully responsive, high-performance
-          websites. I'm always eager to learn new technologies and take on
+          websites. I&apos;m always eager to learn new technologies and take on
           exciting projects.
           <br />
           <br />
