@@ -16,7 +16,7 @@ export default function Footer() {
         </a>
       </div>
       <p className="cursor-pointer float-right text-[#726a61] mr-[10%] hover:text-white">
-        All Rights Reserved. © 2024 (by XiTiZ)
+        All Rights Reserved. © {new Date().getFullYear()} (by XiTiZ)
       </p>
     </div>
   );

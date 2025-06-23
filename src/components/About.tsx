@@ -10,42 +10,51 @@ export default function About() {
         <h1 className="uppercase text-[#ffa460] md:text-4xl  text-4xl p-4 md:p-6 text-center font-bold">
           About me
         </h1>
-        <p className="text-left p-4 md:p-6 text-lg  leading-relaxed">
-          My name is Kshitiz Upreti, and I have completed my B.Sc. in Computer
-          Science and Information Technology (BSC.CSIT) in Nepal. I am
-          originally from Dhangadhi, but I lived in Kathmandu to pursue my
-          studies.
+        <p className="text-left p-4 md:p-6 text-lg leading-relaxed">
+          Hi, I'm Kshitiz Upreti — a Frontend Developer & NOC Engineer based in
+          Nepal.
           <br />
           <br />
-          My fascination with computers and electronic devices began at a young
-          age. I was always eager to open and explore any device I could find,
-          captivated by the intricate workings inside. This curiosity fueled my
-          passion for technology and led me to pursue a degree in computer
-          science.
+          I recently completed my B.Sc. in Computer Science and Information
+          Technology (BSc.CSIT). Originally from Dhangadhi, I moved to Kathmandu
+          to pursue my academic and professional journey in tech.
           <br />
-          <br />
-          With a strong passion for technology and a keen interest in how things
-          work, I have honed my skills as a{" "}
+          <br />I specialize in building modern, responsive web interfaces using{" "}
           <em>
-            <b>Frontend Developer</b>
+            <b>React.js</b>
           </em>
-          . I specialize in{" "}
+          ,{" "}
           <em>
-            <b>React.js</b>, <b>Next.js</b>, <b>Tailwind CSS</b>,{" "}
-            <b>TypeScript</b>, <b>Sass/SCSS</b>, and <b>WordPress</b> using{" "}
-            <b>Elementor</b>
+            <b>Next.js</b>
           </em>
-          .
+          ,{" "}
+          <em>
+            <b>Tailwind CSS</b>
+          </em>
+          ,{" "}
+          <em>
+            <b>TypeScript</b>
+          </em>
+          ,{" "}
+          <em>
+            <b>Sass/SCSS</b>
+          </em>
+          , and{" "}
+          <em>
+            <b>WordPress</b> with <b>Elementor</b>
+          </em>
+          . I enjoy transforming design concepts into clean, scalable code.
           <br />
           <br />
-          I love turning design ideas into fully responsive, high-performance
-          websites. I&apos;m always eager to learn new technologies and take on
-          exciting projects.
+          In addition to frontend development, I work at <b>Huawei</b> as a
+          Network Operations Center (NOC) Engineer. There, I monitor telecom
+          sites, handle incident response, and manage network stability using
+          OWS and core networking protocols like TCP/IP, OSPF, and BGP.
           <br />
           <br />
-          If you have any questions or if there&apos;s anything you&apos;d like
-          to discuss, please feel free to reach out. Thank you for visiting my
-          website, and I look forward to connecting with you!
+          Whether it’s developing high-performance websites or ensuring reliable
+          infrastructure, I’m always eager to learn, build, and collaborate.
+          Thank you for visiting my site — let’s connect!
         </p>
         <div className="flex justify-center">
           <a href="/Resume.pdf" target="_blank" className="w-fit">
