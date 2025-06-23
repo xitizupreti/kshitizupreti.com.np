@@ -11,8 +11,8 @@ export default function About() {
           About me
         </h1>
         <p className="text-left p-4 md:p-6 text-lg leading-relaxed">
-          Hi, I'm Kshitiz Upreti — a Frontend Developer & NOC Engineer based in
-          Nepal.
+          Hi, I&#39;m Kshitiz Upreti — a Frontend Developer & NOC Engineer based
+          in Nepal.
           <br />
           <br />
           I recently completed my B.Sc. in Computer Science and Information

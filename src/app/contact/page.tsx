@@ -79,11 +79,13 @@ export default function Contacts() {
   return (
     <div id="contact" className="relative top-[-100px] p-9 w-full bg-[#f2f3f5]">
       <h1 className="uppercase text-[#ffa460] md:text-4xl text-4xl p-4 md:p-6 text-center font-bold">
-        Contacts
+        Get in Touch
       </h1>
-      <h2 className="text-2xl font-bold ml-[10%] mb-4">Contact Me:</h2>
+      <h2 className="text-2xl font-bold ml-[10%] mb-4">Let’s Connect</h2>
       <h1 className="text-2xl font-bold w-fit ml-[10%] mb-8">
-        <span className="dynamic-text">Some links to contact me:</span>
+        <span className="dynamic-text">
+          Reach out through any of the platforms below:
+        </span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  justify-items-center">
         {contacts.map((contact, index) => (
