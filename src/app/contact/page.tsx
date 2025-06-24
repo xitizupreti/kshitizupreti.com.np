@@ -82,10 +82,8 @@ export default function Contacts() {
         Get in Touch
       </h1>
       <h2 className="text-2xl font-bold ml-[10%] mb-4">Let’s Connect</h2>
-      <h1 className="text-2xl font-bold w-fit ml-[10%] mb-8">
-        <span className="dynamic-text">
-          Reach out through any of the platforms below:
-        </span>
+      <h1 className="text-lg sm:text-2xl font-bold w-full px-4 text-center mb-8 whitespace-nowrap overflow-hidden text-ellipsis">
+        <span className="dynamic-text">Connect with me:</span>
       </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  justify-items-center">
         {contacts.map((contact, index) => (
