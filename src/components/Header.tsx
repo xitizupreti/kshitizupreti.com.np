@@ -50,7 +50,7 @@ export default function Example() {
             </DisclosureButton>
           </div>
           <div className="flex flex-1 items-center justify-evenly sm:justify-space-evenly">
-            <div className="flex flex-shrink-0 items-center logo">
+            <div className="flex flex-shrink-0 items-center logo ">
               <Image
                 alt="Logo"
                 src="/logo.jpg"
@@ -88,7 +88,7 @@ export default function Example() {
             >
               <span className="absolute -inset-1.5" />
               <span className="sr-only">View notifications</span>
-              <BellIcon aria-hidden="true" className="h-6 w-6" />
+              <BellIcon aria-hidden="true" className="h-6 w-6 animate-pulse" />
             </button>
 
             {/* Profile dropdown */}

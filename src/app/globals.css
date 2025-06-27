@@ -17,7 +17,17 @@
   /* vertical-align: bottom; */
   line-height: 1;
 }
-
+.dynamic-contact {
+  color: #ffa460;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #ffa460;
+  animation: typing 5s steps(40, end) infinite, blink 0.75s step-end infinite;
+  line-height: 1;
+  max-width: 35%;
+  box-sizing: border-box;
+}
 @keyframes typing {
   0% {
     width: 0;

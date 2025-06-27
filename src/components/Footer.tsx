@@ -15,7 +15,7 @@ export default function Footer() {
           Contacts
         </a>
       </div>
-      <p className="cursor-pointer float-right text-[#726a61] mr-[10%] hover:text-white">
+      <p className="animate-pulse cursor-pointer float-right text-[#726a61] mr-[10%] hover:text-white">
         All Rights Reserved. © {new Date().getFullYear()} (by XiTiZ)
       </p>
     </div>

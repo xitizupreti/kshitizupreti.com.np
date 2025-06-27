@@ -7,7 +7,7 @@ export default function About() {
       className="flex flex-col md:flex-row relative top-[-100px] p-9 w-full h-[auto]"
     >
       <div className="flex flex-col md:w-1/2">
-        <h1 className="uppercase text-[#ffa460] md:text-4xl  text-4xl p-4 md:p-6 text-center font-bold">
+        <h1 className="uppercase text-[#ffa460] md:text-4xl  text-4xl p-4 md:p-6 text-center font-bold animate-pulse">
           About me
         </h1>
         <p className="text-left p-4 md:p-6 text-lg leading-relaxed">
@@ -58,7 +58,7 @@ export default function About() {
         </p>
         <div className="flex justify-center">
           <a href="/Resume.pdf" target="_blank" className="w-fit">
-            <button className="border-black border-2 p-3  hover:bg-gray-400">
+            <button className="border-black border-2 p-3  hover:bg-gray-400 animate-pulse">
               Download CV
             </button>
           </a>
