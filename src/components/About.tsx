@@ -46,20 +46,22 @@ export default function About() {
           . I enjoy transforming design concepts into clean, scalable code.
           <br />
           <br />
-          In addition to frontend development, I work at <b>Huawei</b> as a
-          Network Operations Center (NOC) Engineer. There, I monitor telecom
-          sites, handle incident response, and manage network stability using
-          OWS and core networking protocols like TCP/IP, OSPF, and BGP.
+           Alongside development, I have professional experience as a NOC Engineer at
+  <b> Huawei</b>, where I monitor network systems, handle incidents, and ensure
+  service reliability in real-time environments.
           <br />
           <br />
-          Whether it’s developing high-performance websites or ensuring reliable
-          infrastructure, I’m always eager to learn, build, and collaborate.
-          Thank you for visiting my site — let’s connect!
+          I enjoy turning ideas into real products — whether it’s a website, a UI system,
+  or something scalable. I’m currently focused on growing as a developer while
+  exploring opportunities to build and collaborate on meaningful projects.
+  <br />
+  <br />
+  If you’re working on something interesting, feel free to connect.
         </p>
         <div className="flex justify-center">
           <a href="/Resume.pdf" target="_blank" className="w-fit">
             <button className="border-black border-2 p-3  hover:bg-gray-400 animate-pulse">
-              Download CV
+              View Resume
             </button>
           </a>
         </div>
