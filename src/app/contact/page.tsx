@@ -98,28 +98,37 @@ export default function Contacts() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-dark-800 min-h-screen w-full relative overflow-hidden">
+    <section
+      id="contact"
+      className="py-24 bg-dark-800 min-h-screen w-full relative overflow-hidden"
+    >
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-primary-500/10 rounded-full blur-[120px] -z-10" />
-      
+
       <div className="container mx-auto px-6 max-w-7xl pt-16">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-16"
         >
-          <Link href="/" className="inline-block mb-8 text-gray-400 hover:text-primary-500 transition-colors">
+          <Link
+            href="/"
+            className="inline-block mb-8 text-gray-400 hover:text-primary-500 transition-colors"
+          >
             ← Back to Home
           </Link>
-          <h2 className="text-primary-500 text-sm font-bold tracking-widest uppercase mb-2">Get in Touch</h2>
+          <h2 className="text-primary-500 text-sm font-bold tracking-widest uppercase mb-2">
+            Get in Touch
+          </h2>
           <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Let's <span className="text-primary-500">Connect</span>
+            Let&apos;s <span className="text-primary-500">Connect</span>
           </h3>
           <p className="text-gray-400 max-w-2xl mx-auto">
-            I'm always open to discussing web development work or partnership opportunities. Find me on any of these platforms!
+            I&apos;m always open to discussing web development work or
+            partnership opportunities. Find me on any of these platforms!
           </p>
         </motion.div>
 
-        <motion.div 
+        <motion.div
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -127,9 +136,9 @@ export default function Contacts() {
         >
           {contacts.map((contact, index) => (
             <motion.div key={index} variants={itemVariants} className="w-full">
-              <a 
-                href={contact.href} 
-                target="_blank" 
+              <a
+                href={contact.href}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="flex flex-col items-center justify-center p-6 w-full h-full bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary-500/50 hover:-translate-y-2 transition-all group shadow-lg"
               >
