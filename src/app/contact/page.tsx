@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { motion, Variants } from "framer-motion";
+import Link from "next/link";
 
 export default function Contacts() {
   const contacts = [
@@ -76,33 +80,75 @@ export default function Contacts() {
     },
   ];
 
+  const containerVariants: Variants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: { staggerChildren: 0.1 },
+    },
+  };
+
+  const itemVariants: Variants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: { type: "spring", stiffness: 120 },
+    },
+  };
+
   return (
-    <div id="contact" className="relative top-[-100px] p-9 w-full bg-[#f2f3f5]">
-      <h1 className="uppercase text-[#ffa460] md:text-4xl text-4xl p-4 md:p-6 text-center font-bold animate-pulse">
-        Get in Touch
-      </h1>
-      <h1 className="text-lg sm:text-2xl font-bold w- px-4 text-center mb-8 whitespace-nowrap overflow-hidden text-ellipsis">
-        <span className="dynamic-contact">Connect with me:</span>
-      </h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8  justify-items-center">
-        {contacts.map((contact, index) => (
-          <div
-            key={index}
-            className="text-center w-[80%] bg-white p-4 rounded shadow-md"
-          >
-            <a href={contact.href} target="_blank" rel="noopener noreferrer">
-              <Image
-                src={contact.imgSrc}
-                alt={contact.alt}
-                width={80}
-                height={80}
-                className="mx-auto mb-4"
-              />
-              <h2 className="text-xl font-semibold">{contact.name}</h2>
-            </a>
-          </div>
-        ))}
+    <section id="contact" className="py-24 bg-dark-800 min-h-screen w-full relative overflow-hidden">
+      <div className="absolute -top-40 -left-40 w-96 h-96 bg-primary-500/10 rounded-full blur-[120px] -z-10" />
+      
+      <div className="container mx-auto px-6 max-w-7xl pt-16">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="text-center mb-16"
+        >
+          <Link href="/" className="inline-block mb-8 text-gray-400 hover:text-primary-500 transition-colors">
+            ← Back to Home
+          </Link>
+          <h2 className="text-primary-500 text-sm font-bold tracking-widest uppercase mb-2">Get in Touch</h2>
+          <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            Let's <span className="text-primary-500">Connect</span>
+          </h3>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            I'm always open to discussing web development work or partnership opportunities. Find me on any of these platforms!
+          </p>
+        </motion.div>
+
+        <motion.div 
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-items-center"
+        >
+          {contacts.map((contact, index) => (
+            <motion.div key={index} variants={itemVariants} className="w-full">
+              <a 
+                href={contact.href} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex flex-col items-center justify-center p-6 w-full h-full bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary-500/50 hover:-translate-y-2 transition-all group shadow-lg"
+              >
+                <div className="relative w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform">
+                  <Image
+                    src={contact.imgSrc}
+                    alt={contact.alt}
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <h2 className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
+                  {contact.name}
+                </h2>
+              </a>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </section>
   );
 }

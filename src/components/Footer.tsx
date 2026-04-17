@@ -1,23 +1,27 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
-    <div className=" bg-[#1f1f1f] h-[120px] p-5">
-      <div className=" p-3 w-[70%] md:w-[30%] ml-[10%] mb-6  flex justify-between ">
-        <a className="text-[#726a61] hover:text-white" href="/#">
-          Home
-        </a>
-        <a className="text-[#726a61] hover:text-white" href="/#about">
-          About
-        </a>
-        <a className="text-[#726a61] hover:text-white" href="/#blog">
-          Blog
-        </a>
-        <a className="text-[#726a61] hover:text-white" href="/contact#contact">
-          Contacts
-        </a>
+    <footer className="border-t border-white/10 bg-dark-900/50 backdrop-blur-md py-8">
+      <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="flex gap-6 text-sm font-medium">
+          <Link className="text-gray-400 hover:text-primary-500 transition-colors" href="/">
+            Home
+          </Link>
+          <Link className="text-gray-400 hover:text-primary-500 transition-colors" href="/#about">
+            About
+          </Link>
+          <Link className="text-gray-400 hover:text-primary-500 transition-colors" href="/#blog">
+            Blog
+          </Link>
+          <Link className="text-gray-400 hover:text-primary-500 transition-colors" href="/contact#contact">
+            Contacts
+          </Link>
+        </div>
+        <p className="text-gray-500 text-sm">
+          © {new Date().getFullYear()} XiTiZ. All Rights Reserved.
+        </p>
       </div>
-      <p className="animate-pulse cursor-pointer float-right text-[#726a61] mr-[10%] hover:text-white">
-        All Rights Reserved. © {new Date().getFullYear()} (by XiTiZ)
-      </p>
-    </div>
+    </footer>
   );
 }

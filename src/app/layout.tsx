@@ -1,16 +1,16 @@
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google";
 import "./globals.css";
 import Kofi from "@/common/KoFi";
 import Counter from "@/common/Counter";
-const inter = Inter({ subsets: ["latin"] });
+const outfit = Outfit({ subsets: ["latin"] });
 import Header from "@/components/Header";
 import Hero from "@/components/Home";
 import Footer from "@/components/Footer";
 import Cloud from "@/common/Cloud";
 import Top from "@/common/Top";
 export const metadata = {
-  title: "XiTiZ Upreti",
-  description: "Portfolio of XiTiZ Upreti",
+  title: "XiTiZ Upreti | Portfolio",
+  description: "Portfolio of XiTiZ Upreti - Frontend Developer",
 };
 
 export default function RootLayout({
@@ -19,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html lang="en" className="scroll-smooth">
+      <body className={`${outfit.className} bg-dark-900 text-white`}>
         <Kofi />
         <Counter />
         <Header />

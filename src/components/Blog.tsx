@@ -1,40 +1,53 @@
+"use client";
+
 import Card from "@/common/BlogTemplate";
+import { motion } from "framer-motion";
 
 export default function Blog() {
   return (
-    <div
-      id="blog"
-      className="flex flex-col bg-[#f2f3f5] p-4 sm:p-9 w-full h-auto overflow-x-hidden"
-    >
-      <h1 className="animate-pulse uppercase text-[#ffa460] md:text-4xl text-4xl  p-4 md:p-6  text-center font-bold">
-        Blogs
-      </h1>
-      <h1 className="text-lg sm:text-xl md:text-2xl font-bold w-fit text-center md:text-left px-4 md:px-0 md:ml-[10%]">
-        <span className="dynamic-text">Personal Highlights & Life Events</span>
-      </h1>
-      <div className=" flex flex-col  items-center md:flex-row pt-8  md:justify-evenly space-y-4 md:space-y-0">
-        <Card
-          date="18 Nov"
-          image="/blog-01.png"
-          heading="Birthday"
-          subHeading="by admin NOV 18, 2001"
-          description="A special day — the beginning of my journey."
-        />
-        <Card
-          date="18 Feb"
-          image="/blog-02.jpg"
-          heading="Bartabanda"
-          subHeading="by admin FEB 18, 2016"
-          description="My cultural coming-of-age ceremony — Bartabanda."
-        />
-        <Card
-          date="DAY MONTH"
-          image=""
-          heading="Marriage"
-          subHeading="by admin *** **, 20**"
-          description="A placeholder for a future chapter yet to unfold."
-        />
+    <section id="blog" className="py-24 bg-dark-900 w-full overflow-hidden relative">
+      <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-primary-500/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
+      
+      <div className="container mx-auto px-6 max-w-7xl">
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="flex flex-col items-center md:items-start mb-16"
+        >
+          <h2 className="text-primary-500 text-sm font-bold tracking-widest uppercase mb-2">My Stories</h2>
+          <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            Highlights & <span className="text-primary-500">Life Events</span>
+          </h3>
+        </motion.div>
+
+        <div className="flex flex-col md:flex-row justify-center lg:justify-between items-center md:items-stretch gap-8">
+          <Card
+            delay={0.1}
+            date="18 Nov"
+            image="/blog-01.png"
+            heading="Birthday"
+            subHeading="by admin • NOV 18, 2001"
+            description="A special day — the beginning of my journey."
+          />
+          <Card
+            delay={0.2}
+            date="18 Feb"
+            image="/blog-02.jpg"
+            heading="Bartabanda"
+            subHeading="by admin • FEB 18, 2016"
+            description="My cultural coming-of-age ceremony — Bartabanda."
+          />
+          <Card
+            delay={0.3}
+            date="TBD"
+            image=""
+            heading="Marriage"
+            subHeading="by admin • *** **, 20**"
+            description="A placeholder for a future chapter yet to unfold."
+          />
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

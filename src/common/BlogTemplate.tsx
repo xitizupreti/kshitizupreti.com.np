@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 interface CardProps {
   date: string;
@@ -6,35 +9,52 @@ interface CardProps {
   heading: string;
   subHeading: string;
   description: string;
+  delay?: number;
 }
 
-const Card = ({ date, image, heading, subHeading, description }: CardProps) => {
+const Card = ({ date, image, heading, subHeading, description, delay = 0 }: CardProps) => {
   return (
-    <div className="relative h-auto w-[350px] bg-white p-3">
-      <h1 className=" absolute top-3 right-3 text-white bg-black bg-opacity-50 p-2 rounded z-[2]">
+    <motion.div 
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-50px" }}
+      transition={{ duration: 0.5, delay }}
+      whileHover={{ y: -10 }}
+      className="relative flex flex-col w-full md:w-[350px] bg-dark-800 rounded-2xl overflow-hidden border border-white/10 shadow-lg group"
+    >
+      <div className="absolute top-4 right-4 z-10 backdrop-blur-md bg-black/60 text-white text-xs font-bold px-3 py-1.5 rounded-full border border-white/10">
         {date}
-      </h1>
-      <div className="relative">
-        <div className="absolute inset-0 bg-black/0 hover:bg-black/50 transition-all animate-pulse "></div>
-        <Image
-          width={350}
-          height={350}
-          src={image}
-          className="w-[350px] min-h-[350px] "
-          alt="wait for this photo"
-        />
+      </div>
+      
+      <div className="relative h-[250px] w-full overflow-hidden">
+        <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/20 transition-colors duration-500 z-[1] mix-blend-overlay"></div>
+        {image ? (
+          <Image
+            src={image}
+            alt={heading}
+            fill
+            className="object-cover transition-transform duration-700 group-hover:scale-110"
+          />
+        ) : (
+          <div className="w-full h-full bg-dark-700 flex items-center justify-center">
+            <span className="text-gray-500 italic">Image coming soon</span>
+          </div>
+        )}
       </div>
 
-      {/* Content */}
-      <div className="p-4">
-        <h4 className="text-xl text-[#ffa460] font-bold mb-[10px]">
+      <div className="p-6 relative">
+        <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <h4 className="text-2xl text-primary-500 font-bold mb-2 group-hover:text-primary-400 transition-colors">
           {heading}
         </h4>
-        <p className="text-sm text-center font-bold">{subHeading}</p>
-        <br />
-        <p className="text-[#726a61]">{description}</p>
+        <p className="text-xs text-gray-400 font-medium tracking-wide uppercase mb-4">
+          {subHeading}
+        </p>
+        <p className="text-gray-300 leading-relaxed">
+          {description}
+        </p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
