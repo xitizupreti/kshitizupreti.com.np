@@ -144,11 +144,13 @@ export default function Contacts() {
               >
                 <div className="relative w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform">
                   <Image
-                    src={contact.imgSrc}
-                    alt={contact.alt}
-                    fill
-                    className="object-contain"
-                  />
+  src={contact.imgSrc}
+  alt={contact.alt}
+  fill
+  className={`object-contain ${
+    contact.name === "GitHub" ? "invert" : ""
+  }`}
+/>
                 </div>
                 <h2 className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
                   {contact.name}
