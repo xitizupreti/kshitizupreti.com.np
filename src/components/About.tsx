@@ -27,34 +27,47 @@ export default function About() {
                 Hi, I&apos;m Kshitiz Upreti — a Frontend Developer based in
                 Nepal.
               </p>
+
               <p>
-                I recently completed my B.Sc. in Computer Science and
-                Information Technology (BSc.CSIT). Originally from Dhangadhi, I
-                moved to Kathmandu to pursue my academic and professional
-                journey in tech.
-              </p>
-              <p>
-                I specialize in building modern, responsive web interfaces using{" "}
+                I build{" "}
                 <span className="text-primary-400 font-medium">
-                  React.js, Next.js, Tailwind CSS, TypeScript,
+                  fast, responsive, and user-focused web applications
                 </span>{" "}
-                and{" "}
+                using React, Next.js, Tailwind CSS, and TypeScript. I enjoy
+                turning ideas and designs into clean, scalable interfaces.
+              </p>
+
+              <p>
+                Currently, I work as an{" "}
+                <span className="text-white font-medium">IT Manager</span> in
+                the financial sector, where I manage systems, infrastructure,
+                and performance-critical applications. This experience helps me
+                build solutions that are not just visually polished, but also
+                reliable in real-world environments.
+              </p>
+
+              <p>
+                I also have experience with{" "}
                 <span className="text-primary-400 font-medium">
-                  WordPress with Elementor
+                  WordPress and Elementor
                 </span>
-                . I enjoy transforming design concepts into clean, scalable
-                code.
+                , developing custom websites, landing pages, and WooCommerce
+                solutions.
               </p>
+
               <p>
-                Previously, I worked as a NOC Engineer at
-                <span className="text-white font-medium"> Huawei</span>, where I
-                monitored network systems, handled incidents, and ensured
-                service reliability in real-time environments.
+                Previously, I worked as a{" "}
+                <span className="text-white font-medium">
+                  NOC Engineer at Huawei
+                </span>{" "}
+                on the Ncell project, handling network monitoring, incident
+                management, and system operations.
               </p>
+
               <p>
-                I enjoy turning ideas into real products and I&apos;m currently
-                focused on growing as a developer while exploring opportunities
-                to build and collaborate on meaningful projects.
+                I enjoy solving practical problems, improving user experience,
+                and continuously learning to build better, more efficient web
+                applications.
               </p>
             </div>
 

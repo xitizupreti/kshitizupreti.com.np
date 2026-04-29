@@ -34,7 +34,7 @@ export default function Hero() {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-dark-900/40 via-dark-900/70 to-dark-900" />
       </div>
-      
+
       {/* Decorative blurred background elements */}
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/20 rounded-full blur-[100px] z-[1]" />
       <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] z-[1]" />
@@ -45,30 +45,44 @@ export default function Hero() {
         animate="visible"
         className="text-center z-10 px-4 w-full max-w-4xl"
       >
-        <motion.h1 
+        <motion.h1
           variants={itemVariants}
           className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]"
         >
           Hi, I’m <span className="text-primary-500">Kshitiz Upreti</span>
         </motion.h1>
-        
-        <motion.h2 
+
+        <motion.h2
           variants={itemVariants}
           className="text-xl md:text-3xl font-medium text-gray-200 mb-8 drop-shadow-md"
         >
-          Frontend Developer
+          Frontend Developer • IT Manager
         </motion.h2>
 
-        <motion.div 
+        <motion.div
           variants={itemVariants}
           className="max-w-2xl mx-auto backdrop-blur-md bg-dark-900/40 border border-white/10 rounded-2xl p-6 shadow-2xl"
         >
           <p className="text-gray-300 text-lg mb-4">
-            Building responsive interfaces & scalable web applications 💻
+            Building fast, user-focused web apps with real-world performance and
+            reliability ⚡
+          </p>
+          <p className="text-gray-400 text-sm mb-2">
+            Experience in fintech systems • ex-Huawei (Ncell NOC){" "}
           </p>
           <div className="flex flex-wrap justify-center gap-2">
-            {["React", "Next.js", "TypeScript", "WordPress", "Elementor", "Tailwind"].map((tech) => (
-              <span key={tech} className="px-3 py-1 bg-white/10 text-primary-400 text-sm font-medium rounded-full border border-primary-500/30 backdrop-blur-md">
+            {[
+              "React",
+              "Next.js",
+              "TypeScript",
+              "Tailwind",
+              "WordPress",
+              "Elementor",
+            ].map((tech) => (
+              <span
+                key={tech}
+                className="px-3 py-1 bg-white/10 text-primary-400 text-sm font-medium rounded-full border border-primary-500/30 backdrop-blur-md"
+              >
                 {tech}
               </span>
             ))}
