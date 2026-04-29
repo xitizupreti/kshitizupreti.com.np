@@ -12,9 +12,16 @@ interface CardProps {
   delay?: number;
 }
 
-const Card = ({ date, image, heading, subHeading, description, delay = 0 }: CardProps) => {
+const Card = ({
+  date,
+  image,
+  heading,
+  subHeading,
+  description,
+  delay = 0,
+}: CardProps) => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-50px" }}
@@ -25,7 +32,7 @@ const Card = ({ date, image, heading, subHeading, description, delay = 0 }: Card
       <div className="absolute top-4 right-4 z-10 backdrop-blur-md bg-black/60 text-white text-xs font-bold px-3 py-1.5 rounded-full border border-white/10">
         {date}
       </div>
-      
+
       <div className="relative h-[250px] w-full overflow-hidden">
         <div className="absolute inset-0 bg-primary-500/0 group-hover:bg-primary-500/20 transition-colors duration-500 z-[1] mix-blend-overlay"></div>
         {image ? (
@@ -33,7 +40,7 @@ const Card = ({ date, image, heading, subHeading, description, delay = 0 }: Card
             src={image}
             alt={heading}
             fill
-            className="object-cover transition-transform duration-700 group-hover:scale-110"
+            className="object-contain transition-transform duration-700 group-hover:scale-110"
           />
         ) : (
           <div className="w-full h-full bg-dark-700 flex items-center justify-center">
@@ -50,9 +57,7 @@ const Card = ({ date, image, heading, subHeading, description, delay = 0 }: Card
         <p className="text-xs text-gray-400 font-medium tracking-wide uppercase mb-4">
           {subHeading}
         </p>
-        <p className="text-gray-300 leading-relaxed">
-          {description}
-        </p>
+        <p className="text-gray-300 leading-relaxed">{description}</p>
       </div>
     </motion.div>
   );
