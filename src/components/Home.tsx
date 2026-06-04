@@ -56,7 +56,7 @@ export default function Hero() {
           variants={itemVariants}
           className="text-xl md:text-3xl font-medium text-gray-200 mb-8 drop-shadow-md"
         >
-          Frontend Developer • IT Manager
+          Frontend Developer • IT Officer
         </motion.h2>
 
         <motion.div

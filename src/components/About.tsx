@@ -39,7 +39,7 @@ export default function About() {
 
               <p>
                 Currently, I work as an{" "}
-                <span className="text-white font-medium">IT Manager</span> in
+                <span className="text-white font-medium">IT Officer</span> in
                 the financial sector, where I manage systems, infrastructure,
                 and performance-critical applications. This experience helps me
                 build solutions that are not just visually polished, but also
