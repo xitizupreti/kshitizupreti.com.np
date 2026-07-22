@@ -100,7 +100,7 @@ export default function Contacts() {
   return (
     <section
       id="contact"
-      className="py-24 bg-dark-800 min-h-screen w-full relative overflow-hidden"
+      className="py-24 bg-gray-50 dark:bg-dark-800 min-h-screen w-full relative overflow-hidden"
     >
       <div className="absolute -top-40 -left-40 w-96 h-96 bg-primary-500/10 rounded-full blur-[120px] -z-10" />
 
@@ -112,17 +112,17 @@ export default function Contacts() {
         >
           <Link
             href="/"
-            className="inline-block mb-8 text-gray-400 hover:text-primary-500 transition-colors"
+            className="inline-block mb-8 text-gray-600 dark:text-gray-400 hover:text-primary-500 transition-colors"
           >
             ← Back to Home
           </Link>
           <h2 className="text-primary-500 text-sm font-bold tracking-widest uppercase mb-2">
             Get in Touch
           </h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          <h3 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Let&apos;s <span className="text-primary-500">Connect</span>
           </h3>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             I&apos;m always open to discussing web development work or
             partnership opportunities. Find me on any of these platforms!
           </p>
@@ -140,7 +140,7 @@ export default function Contacts() {
                 href={contact.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center justify-center p-6 w-full h-full bg-white/5 border border-white/10 rounded-2xl hover:bg-white/10 hover:border-primary-500/50 hover:-translate-y-2 transition-all group shadow-lg"
+                className="flex flex-col items-center justify-center p-6 w-full h-full bg-black/[0.03] dark:bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl hover:bg-black/5 dark:hover:bg-white/10 hover:border-primary-500/50 hover:-translate-y-2 transition-all group shadow-lg"
               >
                 <div className="relative w-16 h-16 mb-4 drop-shadow-lg group-hover:scale-110 transition-transform">
                   <Image
@@ -148,11 +148,11 @@ export default function Contacts() {
   alt={contact.alt}
   fill
   className={`object-contain ${
-    contact.name === "GitHub" ? "invert" : ""
+    contact.name === "GitHub" ? "dark:invert" : ""
   }`}
 />
                 </div>
-                <h2 className="text-sm font-medium text-gray-300 group-hover:text-white transition-colors">
+                <h2 className="text-sm font-medium text-gray-600 dark:text-gray-300 group-hover:text-gray-900 dark:group-hover:text-white transition-colors">
                   {contact.name}
                 </h2>
               </a>

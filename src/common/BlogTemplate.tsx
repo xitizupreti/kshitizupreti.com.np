@@ -27,7 +27,7 @@ const Card = ({
       viewport={{ once: true, margin: "-50px" }}
       transition={{ duration: 0.5, delay }}
       whileHover={{ y: -10 }}
-      className="relative flex flex-col w-full md:w-[350px] bg-dark-800 rounded-2xl overflow-hidden border border-white/10 shadow-lg group"
+      className="relative flex flex-col w-full md:w-[350px] bg-gray-50 dark:bg-dark-800 rounded-2xl overflow-hidden border border-black/10 dark:border-white/10 shadow-lg group"
     >
       <div className="absolute top-4 right-4 z-10 backdrop-blur-md bg-black/60 text-white text-xs font-bold px-3 py-1.5 rounded-full border border-white/10">
         {date}
@@ -43,21 +43,21 @@ const Card = ({
             className="object-contain transition-transform duration-700 group-hover:scale-110"
           />
         ) : (
-          <div className="w-full h-full bg-dark-700 flex items-center justify-center">
+          <div className="w-full h-full bg-gray-100 dark:bg-dark-700 flex items-center justify-center">
             <span className="text-gray-500 italic">Image coming soon</span>
           </div>
         )}
       </div>
 
       <div className="p-6 relative">
-        <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+        <div className="absolute top-0 left-6 right-6 h-[1px] bg-gradient-to-r from-transparent via-black/10 dark:via-white/10 to-transparent"></div>
         <h4 className="text-2xl text-primary-500 font-bold mb-2 group-hover:text-primary-400 transition-colors">
           {heading}
         </h4>
-        <p className="text-xs text-gray-400 font-medium tracking-wide uppercase mb-4">
+        <p className="text-xs text-gray-600 dark:text-gray-400 font-medium tracking-wide uppercase mb-4">
           {subHeading}
         </p>
-        <p className="text-gray-300 leading-relaxed">{description}</p>
+        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">{description}</p>
       </div>
     </motion.div>
   );

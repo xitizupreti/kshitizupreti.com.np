@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-dark-800 w-full overflow-hidden">
+    <section id="about" className="py-24 bg-gray-50 dark:bg-dark-800 w-full overflow-hidden">
       <div className="container mx-auto px-6 max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -18,11 +18,11 @@ export default function About() {
             <h2 className="text-primary-500 text-sm font-bold tracking-widest uppercase mb-2">
               About Me
             </h2>
-            <h3 className="text-3xl md:text-5xl font-bold mb-6 text-white">
+            <h3 className="text-3xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
               Who is <span className="text-primary-500">Kshitiz</span>?
             </h3>
 
-            <div className="text-gray-400 space-y-4 text-lg leading-relaxed mb-8">
+            <div className="text-gray-600 dark:text-gray-400 space-y-4 text-lg leading-relaxed mb-8">
               <p>
                 Hi, I&apos;m Kshitiz Upreti — a Frontend Developer based in
                 Nepal.
@@ -39,7 +39,7 @@ export default function About() {
 
               <p>
                 Currently, I work as an{" "}
-                <span className="text-white font-medium">IT Officer</span> in
+                <span className="text-gray-900 dark:text-white font-medium">IT Officer</span> in
                 the financial sector, where I manage systems, infrastructure,
                 and performance-critical applications. This experience helps me
                 build solutions that are not just visually polished, but also
@@ -57,7 +57,7 @@ export default function About() {
 
               <p>
                 Previously, I worked as a{" "}
-                <span className="text-white font-medium">
+                <span className="text-gray-900 dark:text-white font-medium">
                   NOC Engineer at Huawei
                 </span>{" "}
                 on the Ncell project, handling network monitoring, incident
@@ -85,7 +85,7 @@ export default function About() {
           </div>
 
           <div className="md:w-1/2 w-full order-1 md:order-2 flex justify-center relative">
-            <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-white/10 group">
+            <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-black/10 dark:border-white/10 group">
               <div className="absolute inset-0 bg-primary-500/20 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
               <Image
                 alt="Kshitiz Upreti"

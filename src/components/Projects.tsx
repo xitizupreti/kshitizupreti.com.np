@@ -60,6 +60,15 @@ const projects = [
     demoUrl: "https://introsignupform.vercel.app/",
     repoUrl: "https://github.com/xitizupreti/intro-component-with-signup-form-master",
     readmeUrl: "https://raw.githubusercontent.com/xitizupreti/intro-component-with-signup-form-master/master/README.md",
+  },
+  {
+    id: 7,
+    title: "Project Showcase",
+    description: "A curated showcase of professional projects (BrokerOS KPI, CourtBook Nepal, and more) with private source code — features, screenshots, and tech stack details.",
+    icon: "🗂️",
+    demoUrl: "",
+    repoUrl: "https://github.com/xitizupreti/portfolio-showcase",
+    readmeUrl: "https://raw.githubusercontent.com/xitizupreti/portfolio-showcase/master/README.md",
   }
 ];
 
@@ -90,7 +99,7 @@ export default function Projects() {
   }, [selectedProject]);
 
   return (
-    <section id="projects" className="py-24 bg-dark-900 w-full overflow-hidden relative">
+    <section id="projects" className="py-24 bg-white dark:bg-dark-900 w-full overflow-hidden relative">
       {/* Background flare */}
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-primary-500/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
@@ -102,10 +111,10 @@ export default function Projects() {
           className="flex flex-col items-center mb-16 text-center"
         >
           <h2 className="text-primary-500 text-sm font-bold tracking-widest uppercase mb-2">My Work</h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          <h3 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Featured <span className="text-primary-500">Projects</span>
           </h3>
-          <p className="text-gray-400 max-w-2xl mx-auto">
+          <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
             Click on any project to view its details and README directly.
           </p>
         </motion.div>
@@ -120,15 +129,15 @@ export default function Projects() {
               transition={{ delay: index * 0.1 }}
               whileHover={{ y: -10, scale: 1.02 }}
               onClick={() => setSelectedProject(project)}
-              className="cursor-pointer bg-dark-800 p-8 rounded-2xl border border-white/10 shadow-lg hover:border-primary-500/50 transition-all group flex flex-col items-start"
+              className="cursor-pointer bg-gray-50 dark:bg-dark-800 p-8 rounded-2xl border border-black/10 dark:border-white/10 shadow-lg hover:border-primary-500/50 transition-all group flex flex-col items-start"
             >
-              <div className="text-4xl mb-6 bg-dark-700 w-16 h-16 flex items-center justify-center rounded-xl border border-white/5 group-hover:bg-primary-500/20 group-hover:border-primary-500/30 transition-all">
+              <div className="text-4xl mb-6 bg-gray-100 dark:bg-dark-700 w-16 h-16 flex items-center justify-center rounded-xl border border-black/5 dark:border-white/5 group-hover:bg-primary-500/20 group-hover:border-primary-500/30 transition-all">
                 {project.icon}
               </div>
-              <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-primary-500 transition-colors">
+              <h4 className="text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-primary-500 transition-colors">
                 {project.title}
               </h4>
-              <p className="text-gray-400 leading-relaxed line-clamp-3">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed line-clamp-3">
                 {project.description}
               </p>
             </motion.div>
@@ -150,37 +159,39 @@ export default function Projects() {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 0.95, y: 20 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-dark-800 w-full max-w-5xl max-h-[90vh] rounded-2xl shadow-2xl border border-white/10 flex flex-col overflow-hidden relative"
+              className="bg-white dark:bg-dark-800 w-full max-w-5xl max-h-[90vh] rounded-2xl shadow-2xl border border-black/10 dark:border-white/10 flex flex-col overflow-hidden relative"
             >
               {/* Header / Actions */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 border-b border-white/10 bg-dark-900/50 backdrop-blur-md sticky top-0 z-10 gap-4">
+              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-6 border-b border-black/10 dark:border-white/10 bg-gray-50/50 dark:bg-dark-900/50 backdrop-blur-md sticky top-0 z-10 gap-4">
                 <div className="flex items-center gap-4">
                   <div className="text-3xl">{selectedProject.icon}</div>
-                  <h3 className="text-2xl font-bold text-white">{selectedProject.title}</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white">{selectedProject.title}</h3>
                 </div>
-                
+
                 <div className="flex items-center gap-3 w-full sm:w-auto">
-                  <a 
-                    href={selectedProject.repoUrl} 
-                    target="_blank" 
+                  <a
+                    href={selectedProject.repoUrl}
+                    target="_blank"
                     rel="noreferrer"
-                    className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-dark-700 hover:bg-dark-600 text-white rounded-lg transition-colors border border-white/5"
+                    className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-gray-100 dark:bg-dark-700 hover:bg-gray-200 dark:hover:bg-dark-600 text-gray-900 dark:text-white rounded-lg transition-colors border border-black/5 dark:border-white/5"
                   >
                     <CodeBracketIcon className="w-5 h-5" />
                     <span>Repo</span>
                   </a>
-                  <a 
-                    href={selectedProject.demoUrl} 
-                    target="_blank" 
-                    rel="noreferrer"
-                    className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-dark-900 font-bold rounded-lg transition-colors"
-                  >
-                    <GlobeAltIcon className="w-5 h-5" />
-                    <span>Demo</span>
-                  </a>
-                  <button 
+                  {selectedProject.demoUrl && (
+                    <a
+                      href={selectedProject.demoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-dark-900 font-bold rounded-lg transition-colors"
+                    >
+                      <GlobeAltIcon className="w-5 h-5" />
+                      <span>Demo</span>
+                    </a>
+                  )}
+                  <button
                     onClick={() => setSelectedProject(null)}
-                    className="p-2 text-gray-400 hover:text-white hover:bg-white/10 rounded-lg transition-colors ml-2"
+                    className="p-2 text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white hover:bg-black/5 dark:hover:bg-white/10 rounded-lg transition-colors ml-2"
                   >
                     <XMarkIcon className="w-6 h-6" />
                   </button>
@@ -188,13 +199,13 @@ export default function Projects() {
               </div>
 
               {/* Markdown Content */}
-              <div className="p-6 md:p-10 overflow-y-auto custom-scrollbar flex-1 bg-dark-800">
+              <div className="p-6 md:p-10 overflow-y-auto custom-scrollbar flex-1 bg-white dark:bg-dark-800">
                 {loading ? (
                   <div className="flex items-center justify-center h-40">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-500"></div>
                   </div>
                 ) : (
-                  <article className="prose prose-invert prose-primary max-w-none">
+                  <article className="prose dark:prose-invert prose-primary max-w-none">
                     <ReactMarkdown remarkPlugins={[remarkGfm]}>
                       {readmeContent}
                     </ReactMarkdown>

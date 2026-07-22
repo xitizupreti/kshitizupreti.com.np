@@ -109,3 +109,240 @@
   height: 100%;
   transform: translate(12px, 0px);
 }
+
+/* Intro Splash */
+.splash-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: #09090b;
+}
+
+.splash-overlay-exit {
+  animation: splash-exit 400ms ease-in forwards;
+}
+
+.splash-grid {
+  position: absolute;
+  inset: -1px;
+  background-image: linear-gradient(rgba(245, 158, 11, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 158, 11, 0.08) 1px, transparent 1px);
+  background-size: 44px 44px;
+  -webkit-mask-image: radial-gradient(circle at center, black 0%, transparent 75%);
+  mask-image: radial-gradient(circle at center, black 0%, transparent 75%);
+  animation: splash-grid-breathe 4s ease-in-out infinite;
+}
+
+.splash-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(245, 158, 11, 0.25), transparent 60%);
+  animation: splash-glow-breathe 3.2s ease-in-out infinite;
+}
+
+.splash-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.splash-wordmark {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  font-size: clamp(3rem, 10vw, 6rem);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: #fff;
+  padding: 0.1em 0.2em;
+}
+
+.splash-letter {
+  position: relative;
+  display: inline-block;
+}
+
+.splash-letter-first {
+  animation: splash-first-in 420ms cubic-bezier(0.22, 1, 0.36, 1) 120ms both;
+}
+
+.splash-letter-glyph {
+  position: relative;
+  z-index: 1;
+}
+
+.splash-letter-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1.6em;
+  height: 1.6em;
+  transform: translate(-50%, -50%) scale(0.5);
+  border-radius: 9999px;
+  border: 2px solid #fbbf24;
+  box-shadow: 0 0 20px 4px rgba(251, 191, 36, 0.65), 0 0 45px 10px rgba(245, 158, 11, 0.35);
+  opacity: 0;
+  animation: splash-ring-pulse 650ms ease-out both;
+}
+
+.splash-letter-cascade {
+  opacity: 0;
+  filter: blur(8px);
+  transform: translateY(10px);
+  animation: splash-cascade-in 450ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.splash-shine {
+  position: absolute;
+  top: -20%;
+  left: -60%;
+  width: 45%;
+  height: 140%;
+  background: linear-gradient(115deg, transparent, rgba(255, 255, 255, 0.55), transparent);
+  transform: skewX(-20deg) translateX(0%);
+  opacity: 0;
+  animation: splash-shine-sweep 700ms ease-in-out 1100ms both;
+}
+
+.splash-tagline {
+  opacity: 0;
+  transform: translateY(10px);
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.95rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  animation: splash-tagline-in 550ms ease-out 1250ms both;
+}
+
+@keyframes splash-ring-pulse {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  35% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.4);
+  }
+}
+
+@keyframes splash-first-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes splash-cascade-in {
+  0% {
+    opacity: 0;
+    filter: blur(8px);
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes splash-shine-sweep {
+  0% {
+    opacity: 0;
+    transform: skewX(-20deg) translateX(0%);
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: skewX(-20deg) translateX(500%);
+  }
+}
+
+@keyframes splash-tagline-in {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes splash-grid-breathe {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes splash-glow-breathe {
+  0%,
+  100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.08);
+  }
+}
+
+@keyframes splash-exit {
+  0% {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    filter: blur(18px);
+    transform: scale(1.08);
+  }
+}
+
+/* Floating Brand Ball */
+.floating-ball-ring {
+  --ring-color: #f59e0b;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 6px;
+  border-radius: 9999px;
+  border: 3px solid var(--ring-color);
+  box-shadow: 0 0 14px 0 var(--ring-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.floating-ball-logo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  overflow: hidden;
+  pointer-events: none;
+}

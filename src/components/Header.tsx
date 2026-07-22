@@ -6,6 +6,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import ThemeToggle from "@/common/ThemeToggle";
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -34,7 +35,7 @@ export default function Header() {
       as="nav"
       className={`fixed top-0 left-0 w-full z-[50] transition-all duration-300 ${
         scrolled
-          ? "bg-dark-900/70 backdrop-blur-lg border-b border-white/10 shadow-lg"
+          ? "bg-white/70 dark:bg-dark-900/70 backdrop-blur-lg border-b border-black/10 dark:border-white/10 shadow-lg"
           : "bg-transparent"
       }`}
     >
@@ -43,10 +44,15 @@ export default function Header() {
           
           {/* Mobile Menu Button */}
           <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
-            <DisclosureButton className="group inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-white/10 hover:text-white">
+            <DisclosureButton className="group inline-flex items-center justify-center rounded-md p-2 text-gray-500 dark:text-gray-400 hover:bg-black/5 dark:hover:bg-white/10 hover:text-gray-900 dark:hover:text-white">
               <Bars3Icon className="block h-6 w-6 group-data-[open]:hidden" />
               <XMarkIcon className="hidden h-6 w-6 group-data-[open]:block" />
             </DisclosureButton>
+          </div>
+
+          {/* Theme Toggle (mobile, top-right) */}
+          <div className="absolute inset-y-0 right-0 flex items-center sm:hidden">
+            <ThemeToggle />
           </div>
 
           {/* Logo (center on mobile, left on desktop) */}
@@ -72,7 +78,7 @@ export default function Header() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setActiveLink(item.href)}
-                  className="relative px-3 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors"
+                  className="relative px-3 py-2 text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
                 >
                   {item.name}
                   {activeLink === item.href && (
@@ -86,11 +92,16 @@ export default function Header() {
               ))}
             </div>
           </div>
+
+          {/* Theme Toggle (desktop, nav right) */}
+          <div className="hidden sm:flex items-center">
+            <ThemeToggle />
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
-      <DisclosurePanel className="sm:hidden border-t border-white/10 bg-dark-900/95 backdrop-blur-xl absolute w-full">
+      <DisclosurePanel className="sm:hidden border-t border-black/10 dark:border-white/10 bg-white/95 dark:bg-dark-900/95 backdrop-blur-xl absolute w-full">
         <div className="space-y-2 px-4 pb-6 pt-4">
           {navigation.map((item) => (
             <DisclosureButton
@@ -101,7 +112,7 @@ export default function Header() {
               className={classNames(
                 activeLink === item.href
                   ? "bg-primary-500/10 text-primary-500 border border-primary-500/20"
-                  : "text-gray-300 hover:bg-white/5 hover:text-white border border-transparent",
+                  : "text-gray-600 dark:text-gray-300 hover:bg-black/5 dark:hover:bg-white/5 hover:text-gray-900 dark:hover:text-white border border-transparent",
                 "block rounded-lg px-4 py-3 text-base font-medium transition-all"
               )}
             >

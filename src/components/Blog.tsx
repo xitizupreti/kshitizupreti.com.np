@@ -7,7 +7,7 @@ export default function Blog() {
   return (
     <section
       id="blog"
-      className="py-24 bg-dark-900 w-full overflow-hidden relative"
+      className="py-24 bg-white dark:bg-dark-900 w-full overflow-hidden relative"
     >
       <div className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-primary-500/5 rounded-full blur-[120px] -z-10 pointer-events-none" />
 
@@ -21,7 +21,7 @@ export default function Blog() {
           <h2 className="text-primary-500 text-sm font-bold tracking-widest uppercase mb-2">
             My Stories
           </h2>
-          <h3 className="text-3xl md:text-5xl font-bold text-white mb-4">
+          <h3 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Highlights &amp;{" "}
             <span className="text-primary-500">Life Events</span>
           </h3>
