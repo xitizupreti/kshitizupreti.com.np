@@ -18,6 +18,24 @@ const projects = [
   },
   {
     id: 2,
+    title: "Project Showcase",
+    description: "A curated showcase of professional projects (BrokerOS KPI, CourtBook Nepal, and more) with private source code — features, screenshots, and tech stack details.",
+    icon: "🗂️",
+    demoUrl: "",
+    repoUrl: "https://github.com/xitizupreti/portfolio-showcase",
+    readmeUrl: "https://raw.githubusercontent.com/xitizupreti/portfolio-showcase/master/README.md",
+  },
+  {
+    id: 3,
+    title: "Nhuga Makeup Studio",
+    description: "A pink-themed business site for a makeup studio, with booking CTAs, service highlights, and a branded intro animation.",
+    icon: "💄",
+    demoUrl: "https://nhuga-makeup-studio.vercel.app/",
+    repoUrl: "https://github.com/xitizupreti/nhuga-makeup-studio",
+    readmeUrl: "https://raw.githubusercontent.com/xitizupreti/nhuga-makeup-studio/main/README.md",
+  },
+  {
+    id: 4,
     title: "Task Manager (MongoDB)",
     description: "A full-stack task management application utilizing a MongoDB database.",
     icon: "📋",
@@ -26,16 +44,16 @@ const projects = [
     readmeUrl: "https://raw.githubusercontent.com/xitizupreti/taskmanager-mongodb/main/README.md",
   },
   {
-    id: 3,
+    id: 5,
     title: "Ghatal Electricals",
     description: "A business showcase website for Ghatal Electricals.",
     icon: "⚡",
     demoUrl: "https://ghatalelectricals.vercel.app/",
     repoUrl: "https://github.com/xitizupreti/ghatalelectricals",
-    readmeUrl: "", 
+    readmeUrl: "",
   },
   {
-    id: 4,
+    id: 6,
     title: "Scroller Kanban Board",
     description: "An interactive Kanban board with scrolling functionality.",
     icon: "📝",
@@ -44,7 +62,7 @@ const projects = [
     readmeUrl: "https://raw.githubusercontent.com/xitizupreti/Scoller-KanbanBoard/main/README.md",
   },
   {
-    id: 5,
+    id: 7,
     title: "Notes App",
     description: "A fast and responsive notes application.",
     icon: "📓",
@@ -53,7 +71,7 @@ const projects = [
     readmeUrl: "https://raw.githubusercontent.com/xitizupreti/notes-app/master/README.md",
   },
   {
-    id: 6,
+    id: 8,
     title: "Intro Signup Component",
     description: "A modern, animated intro and sign-up form component.",
     icon: "✨",
@@ -61,15 +79,6 @@ const projects = [
     repoUrl: "https://github.com/xitizupreti/intro-component-with-signup-form-master",
     readmeUrl: "https://raw.githubusercontent.com/xitizupreti/intro-component-with-signup-form-master/master/README.md",
   },
-  {
-    id: 7,
-    title: "Project Showcase",
-    description: "A curated showcase of professional projects (BrokerOS KPI, CourtBook Nepal, and more) with private source code — features, screenshots, and tech stack details.",
-    icon: "🗂️",
-    demoUrl: "",
-    repoUrl: "https://github.com/xitizupreti/portfolio-showcase",
-    readmeUrl: "https://raw.githubusercontent.com/xitizupreti/portfolio-showcase/master/README.md",
-  }
 ];
 
 export default function Projects() {
@@ -183,7 +192,7 @@ export default function Projects() {
                       href={selectedProject.demoUrl}
                       target="_blank"
                       rel="noreferrer"
-                      className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-dark-900 font-bold rounded-lg transition-colors"
+                      className="flex-1 sm:flex-none flex items-center justify-center gap-2 px-4 py-2 bg-primary-500 hover:bg-primary-600 text-white font-bold rounded-lg transition-colors"
                     >
                       <GlobeAltIcon className="w-5 h-5" />
                       <span>Demo</span>

@@ -77,7 +77,7 @@ export default function About() {
               className="w-fit"
             >
               <a href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
-                <button className="px-8 py-4 bg-primary-500 hover:bg-primary-600 text-dark-900 font-bold rounded-lg transition-colors shadow-lg shadow-primary-500/20">
+                <button className="px-8 py-4 bg-primary-500 hover:bg-primary-600 text-white font-bold rounded-lg transition-colors shadow-lg shadow-primary-500/20">
                   View Resume
                 </button>
               </a>
@@ -85,19 +85,21 @@ export default function About() {
           </div>
 
           <div className="md:w-1/2 w-full order-1 md:order-2 flex justify-center relative">
-            <div className="relative w-full max-w-[400px] aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl border border-black/10 dark:border-white/10 group">
-              <div className="absolute inset-0 bg-primary-500/20 group-hover:bg-transparent transition-colors z-10 duration-500"></div>
-              <Image
-                alt="Kshitiz Upreti"
-                fill
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-                src="/about_04.jpg"
-                sizes="(max-width: 768px) 100vw, 50vw"
-              />
+            {/* Pink card frame around the photo, kept clear/HD instead of tinted */}
+            <div className="relative w-full max-w-[400px] rounded-[2rem] bg-gradient-to-br from-primary-100 to-primary-200 dark:from-dark-700 dark:to-dark-800 p-3 shadow-[0_30px_60px_-15px_rgba(244,84,138,0.35)] group">
+              <div className="relative w-full aspect-[3/4] rounded-3xl overflow-hidden shadow-lg border border-white/40 dark:border-white/5">
+                <Image
+                  alt="Kshitiz Upreti"
+                  fill
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                  src="/about_04.jpg"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                />
+              </div>
             </div>
             {/* Design accents */}
-            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-500/20 blur-[50px] -z-10 rounded-full"></div>
-            <div className="absolute -top-6 -left-6 w-32 h-32 bg-purple-500/20 blur-[50px] -z-10 rounded-full"></div>
+            <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary-500/25 blur-[50px] -z-10 rounded-full"></div>
+            <div className="absolute -top-6 -left-6 w-32 h-32 bg-primary-300/30 blur-[50px] -z-10 rounded-full"></div>
           </div>
         </motion.div>
       </div>

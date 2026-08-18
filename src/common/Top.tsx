@@ -3,5 +3,5 @@
 import ScrollToTop from "react-scroll-to-top";
 
 export default function Top() {
-  return <ScrollToTop smooth color="#ffa460" />;
+  return <ScrollToTop smooth color="#f4548a" />;
 }

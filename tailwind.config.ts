@@ -17,8 +17,16 @@ const config: Config = {
           700: "#27272a",
         },
         primary: {
-          500: "#f59e0b",
-          400: "#fbbf24",
+          50: "#fff5f8",
+          100: "#ffe8ef",
+          200: "#ffd0df",
+          300: "#feadc5",
+          400: "#fb7da4",
+          500: "#f4548a",
+          600: "#e0316d",
+          700: "#bd1f56",
+          800: "#9c1d49",
+          900: "#821d41",
         }
       },
       backgroundImage: {

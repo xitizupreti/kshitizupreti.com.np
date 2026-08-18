@@ -14,7 +14,7 @@ const ACTIVE_LOW_THRESHOLD = 2;
 const ACTIVE_HIGH_THRESHOLD = 4;
 const MAX_FLING_SPEED = 45;
 
-const IDLE_COLOR = "#f59e0b";
+const IDLE_COLOR = "#f4548a";
 const ACTIVE_COLOR = "#ffffff";
 
 const FRAME_MS = 1000 / 60;

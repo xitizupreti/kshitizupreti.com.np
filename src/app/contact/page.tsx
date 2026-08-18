@@ -1,10 +1,29 @@
 "use client";
 
+import { useState, FormEvent } from "react";
 import Image from "next/image";
 import { motion, Variants } from "framer-motion";
 import Link from "next/link";
+import { PaperAirplaneIcon } from "@heroicons/react/24/outline";
+
+const WHATSAPP_NUMBER = "9779869547209"; // +977 986-954-7209
 
 export default function Contacts() {
+  const [name, setName] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (!message.trim()) return;
+
+    const text = `Hi Kshitiz, I'm ${name.trim() || "a visitor from your portfolio"}.\n\n${message.trim()}`;
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+
+    setName("");
+    setMessage("");
+  };
+
   const contacts = [
     {
       name: "Linkedin",
@@ -127,6 +146,46 @@ export default function Contacts() {
             partnership opportunities. Find me on any of these platforms!
           </p>
         </motion.div>
+
+        <motion.form
+          onSubmit={handleSubmit}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.1 }}
+          className="max-w-xl mx-auto mb-20 bg-white dark:bg-dark-900/50 border border-black/10 dark:border-white/10 rounded-2xl p-6 sm:p-8 shadow-lg"
+        >
+          <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-1">
+            Send me a message on WhatsApp
+          </h4>
+          <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+            Fill this in and it opens WhatsApp with your message ready to send.
+          </p>
+
+          <div className="space-y-4">
+            <input
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name (optional)"
+              className="w-full rounded-xl border border-black/10 dark:border-white/10 bg-gray-50 dark:bg-dark-800 px-4 py-3 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500"
+            />
+            <textarea
+              required
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
+              placeholder="What would you like to say?"
+              rows={4}
+              className="w-full rounded-xl border border-black/10 dark:border-white/10 bg-gray-50 dark:bg-dark-800 px-4 py-3 text-sm text-gray-900 dark:text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:border-primary-500 resize-none"
+            />
+            <button
+              type="submit"
+              className="w-full flex items-center justify-center gap-2 rounded-xl bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 shadow-lg shadow-primary-500/30 transition-colors"
+            >
+              <PaperAirplaneIcon className="w-5 h-5" />
+              Send on WhatsApp
+            </button>
+          </div>
+        </motion.form>
 
         <motion.div
           variants={containerVariants}

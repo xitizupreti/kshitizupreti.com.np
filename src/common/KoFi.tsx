@@ -12,7 +12,7 @@ export default function Kofi() {
         (window as any).kofiWidgetOverlay.draw("kshitizupreti", {
           type: "floating-chat",
           "floating-chat.donateButton.text": "Support Us",
-          "floating-chat.donateButton.background-color": "#ffa460",
+          "floating-chat.donateButton.background-color": "#f4548a",
           "floating-chat.donateButton.text-color": "#fff",
         });
       }

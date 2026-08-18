@@ -32,7 +32,7 @@ export default function Hero() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-900/40 via-dark-900/70 to-dark-900" />
+        <div className="absolute inset-0 bg-gradient-to-b from-dark-900/10 via-dark-900/40 to-dark-900" />
       </div>
 
       {/* Decorative blurred background elements */}
@@ -47,7 +47,7 @@ export default function Hero() {
       >
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-bold mb-4 tracking-tight drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]"
+          className="text-5xl md:text-7xl font-bold mb-4 tracking-tight text-white drop-shadow-[0_5px_5px_rgba(0,0,0,0.8)]"
         >
           Hi, I’m <span className="text-primary-500">Kshitiz Upreti</span>
         </motion.h1>
